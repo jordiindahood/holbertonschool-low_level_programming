@@ -15,7 +15,7 @@ int ch = 48;
 for (ch = 48;   ch <= 57;  ch++)
 {
 putchar(ch);
-if (ch >47 && ch <57)
+if (ch > 47 && ch < 57)
 {
 putchar(',');
 putchar(' ');
