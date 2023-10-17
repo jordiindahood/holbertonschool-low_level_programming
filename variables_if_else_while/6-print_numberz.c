@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 /*more headers goes there*/
 
 /**
@@ -9,12 +10,12 @@
  */
 int main(void)
 {
-char ch = '0';
-char newline = '\n';
-for (ch = '0';   ch <= '9';  ch++)
+int ch = 48;
+
+for (ch = 48;   ch <= 57;  ch++)
 {
 putchar(ch);
 }
-putchar(newline);
+putchar('\n');
 return (0);
 }
