@@ -2,7 +2,8 @@
 #include <stdio.h>
 /**
  * print_sign - check the code
- * Description: print the sign of a number("+" if positive, "-" negative or "0")
+ * Description: print the sign of a number
+ * ("+" if positive, "-" negative or "0")
  * @n: int, number
  * Return:
  * 0 if is zero
