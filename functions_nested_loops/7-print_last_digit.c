@@ -1,4 +1,3 @@
-#include <time.h>
 #include <stdio.h>
 /*more headers goes there*/
 
@@ -14,6 +13,6 @@ int print_last_digit(int n)
 	if (n < 0)
 		n = n * -1;
 	x = n % 10;
-	putchar('0' + x);
+	_putchar('0' + x);
 	return (x);
 }
