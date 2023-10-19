@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
+#include "main.h"
 /*more headers goes there*/
 
 /**
