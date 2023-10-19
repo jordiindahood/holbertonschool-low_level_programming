@@ -11,19 +11,21 @@
  */
 int print_sign(int n)
 {
+	int x;
 	if (n == 0)
 	{
-		_putchar("0");
-		return (0) ;
+		_putchar('0');
+		x = 0;
 	}
 	else if (n < 0)
 	{
-		_putchar("-");
-		return (-1);
+		_putchar('-');
+		x = -1;
 	}
 	else
 	{
-		_putchar("+");
-		return (1);
+		_putchar('+');
+		x = 1;
 	}
+	return (x);
 }
