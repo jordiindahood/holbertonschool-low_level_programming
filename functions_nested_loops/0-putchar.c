@@ -13,7 +13,8 @@
 int main(void)
 {
 char ch[] = "_putchar";
-for (int i = 0 ; i < strlen(ch); i++)
+int i = 0;
+for (i = 0 ; i < strlen(ch); i++)
 {
 if (ch[i] != '\0')
 putchar(ch[i]);
