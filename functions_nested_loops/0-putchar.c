@@ -21,5 +21,6 @@ putchar(ch[i]);
 else
 break;
 }
+putchar('\n');
 return (0);
 }
