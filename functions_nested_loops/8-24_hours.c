@@ -7,7 +7,7 @@
  * Description: print form 00:00 to 23:59
  * Return: void
  */
- void jack_bauer(void)
+void jack_bauer(void)
 {
 	int i, x, y, z;
 
@@ -27,8 +27,16 @@
 					_putchar('0' + y);
 					_putchar('0' + z);
 					_putchar('\n');
+					if (i == 2 && x == 3 && y == 5 && z == 9)
+						break;
 				}
+				if (i == 2 && x == 3 && y == 5 && z == 9)
+					break;
 			}
+			if (i == 2 && x == 3 && y == 5 && z == 9)
+				break;
 		}
+		if (i == 2 && x == 3 && y == 5 && z == 9)
+			break;
 	}
 }
