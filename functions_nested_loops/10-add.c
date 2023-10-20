@@ -3,7 +3,7 @@
 /*more headers goes there*/
 
 /**
- * times_table - check the code
+ * add - check the code
  * Description: add two integers
  * @a : int
  * @b : int
