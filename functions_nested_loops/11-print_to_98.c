@@ -5,8 +5,8 @@
 
 /**
  * print_to_98 - check the code
- * Description: print all numbers between @a and 98
- * @a : int
+ * Description: print all numbers between @n and 98
+ * @n : int
  * Return: void
  */
 void print_to_98(int n)
