@@ -8,10 +8,10 @@ all: ${OBJ}
 	${CC} ${SRC} -o ${NAME}
 
 clean: ${OBJ}
-	@RM *.~ ${NAME}
+	${RM} *.~ ${NAME}
 oclean:
-	@RM ${OBJ}
+	${RM} ${OBJ}
 fclean:
-	@RM *~ ${NAME}
+	${RM} *~ ${NAME}
 re:
-	@RM ${OBJ}
+	${RM} ${OBJ}
