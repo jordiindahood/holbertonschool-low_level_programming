@@ -7,11 +7,11 @@ RM = rm -f
 all: ${OBJ}
 	${CC} ${SRC} -o ${NAME}
 
-clean: ${OBJ}
-	${RM} *.~ -o ${NAME}
+clean:
+	${RM} *.~ ${NAME}
 oclean:
 	${RM} ${OBJ}
 fclean:
-	${RM} *~ -o ${NAME}
+	${RM} *~ ${NAME}
 re:
 	${RM} ${OBJ}
