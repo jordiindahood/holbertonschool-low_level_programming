@@ -8,25 +8,31 @@
  */
 void print_triangle(int size)
 {
-	int rows = size;
-	int i, j, k;
+	int i;
+	int j;
+	int n;
 
-	if (size <1)
-		_putchar('\n');
-	else {
-	for (i = 0; i < rows; i++)
+	if (size > 0)
 	{
-
-		for (j = 0; j < 2 * (rows - i) - 1; j++)
+		for (i = 0; i < size; i++)
 		{
-			printf(" ");
+			for (j = 0; j < size; j++)
+			{
+				if (j < size - i - 1)
+				{
+					putchar(32);
+				}
+				else
+				{
+					putchar(35);
+				}
+				n--;
+			}
+			putchar('\n');
 		}
-
-		for (k = 0; k <= i; k++)
-		{
-			printf("#");
-		}
-		printf("\n");
 	}
-}
+	else
+	{
+		putchar('\n');
+	}
 }
