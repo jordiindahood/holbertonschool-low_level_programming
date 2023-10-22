@@ -10,6 +10,10 @@ void print_triangle(int size)
 {
 	int rows = size;
 	int i, j, k;
+
+	if (size <1)
+		_putchar('\n');
+	else {
 	for (i = 0; i < rows; i++)
 	{
 
@@ -24,4 +28,5 @@ void print_triangle(int size)
 		}
 		printf("\n");
 	}
+}
 }
