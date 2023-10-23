@@ -12,7 +12,7 @@ void print_rev(char *s)
 	int i, n;
 
 	n = strlen(s);
-	if (*s == NULL)
+	if (*s == '\0')
 		_putchar('\n');
 	else 
 	{	
