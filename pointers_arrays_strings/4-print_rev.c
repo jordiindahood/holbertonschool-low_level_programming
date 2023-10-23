@@ -14,9 +14,10 @@ void print_rev(char *s)
 	n = strlen(s);
 	if (*s == '\0')
 		_putchar('\n');
-	else 
-	{	
-	for (i = 0; i <= n; i++)
-		_putchar(*(s + n - i));
-}
+	else
+	{
+		for (i = 0; i <= n; i++)
+			_putchar(*(s + n - i));
+		_putchar('\n');
+	}
 }
