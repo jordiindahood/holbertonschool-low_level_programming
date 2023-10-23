@@ -10,22 +10,24 @@
 void rev_string(char *s)
 {
 	int i, n;
-	char str[100];
 
-	n = strlen(s);
+	char str[50];
+
 	i = 0;
+	n= strlen(s);
 	if (n != 0)
 	{
 		do
 		{
 			str[i] = *(s + n - i - 1);
 			i++;
-		} while (*(s + i) != '\0');
-		i=0;
+		} while (i <=n);
+		i = 0;
 		do
 		{
-			*(s+i) = str[i];
+			*(s + i) = str[i];
 			i++;
-		} while (str[i] != '\0');
+		} while (i < n);
 	}
+	_putchar('\n');
 }
