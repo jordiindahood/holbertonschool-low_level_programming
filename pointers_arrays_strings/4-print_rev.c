@@ -4,7 +4,7 @@
 /**
  * print_rev - check the code
  * Description: print a string in reverse
- * @a : pointer to the string to be executed
+ * @s: pointer to the string to be executed
  * Return: void
  */
 void print_rev(char *s)
@@ -12,6 +12,8 @@ void print_rev(char *s)
 	int i, n;
 
 	n = strlen(s);
+	if (*s == NULL)
+		_putchar('\n');
 	for (i = 0; i <= n; i++)
 		_putchar(*(s + n - i));
 }
