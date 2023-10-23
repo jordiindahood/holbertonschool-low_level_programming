@@ -16,8 +16,12 @@ void print_rev(char *s)
 		_putchar('\n');
 	else
 	{
-		for (i = 0; i <= n; i++)
-			_putchar(*(s + n - i - 1));
+		i = 0;
+		do
+		{
+			_putchar(*(s + n - i -1));
+			i++;
+		} while (*(s + i) != '\0');
 		_putchar('\n');
 	}
 }
