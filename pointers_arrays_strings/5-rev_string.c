@@ -17,17 +17,14 @@ void rev_string(char *s)
 	n = strlen(s);
 	if (n != 0)
 	{
-		do
-		{
+		do {
 			str[i] = *(s + n - i - 1);
 			i++;
 		} while (i <= n);
 		i = 0;
-		do
-		{
+		do {
 			*(s + i) = str[i];
 			i++;
 		} while (i < n);
 	}
-	_putchar('\n');
 }
