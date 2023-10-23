@@ -7,18 +7,18 @@
  * @str: pointer to the string to be executed
  * Return: void
  */
-void puts_half(char *s)
+void puts_half(char *str)
 {
 	int i, n, m;
 
-	n = strlen(s);
+	n = strlen(str);
 	if (n % 2 == 0)
 		m = n * 2;
 	else
 		m = (n - 1) / 2;
 	for (i = m; i < n; i++)
 	{
-		_putchar(*(s + i));
+		_putchar(*(str + i));
 	}
 	_putchar('\n');
 }
