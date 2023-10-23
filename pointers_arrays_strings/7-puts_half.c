@@ -7,7 +7,7 @@
  * @str: pointer to the string to be executed
  * Return: void
  */
-void puts2(char *s)
+void puts_half(char *s)
 {
 	int i, n, m;
 
