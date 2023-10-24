@@ -10,20 +10,14 @@
  */
 int _atoi(char *s)
 {
-	int i, len = 0;
-	unsigned int res;
+	unsigned int res = 0;
+	int i;
 
-	len = strlen(s);
-	while (i < len)
-	{
-		if (*(s + i) >= 48 && *(s + i) <= 57)
-		{
-			if (*(s + i - 1) == '-')
-				res = res * 10 + atoi((s + i)) * -1;
-			else
-				res = res * 10 + atoi((s + i));
-		}
-		i++;
-	}
+	for (i = 0; s[i] != '\0'; ++i)
+		if (s[i] < 58 && s[i] > 47)
+			res = res * 10 + s[i] - '0';
+	for (i = 0; s[i] != '\0'; ++i)
+		if (s[i] == '-')
+			res = res * -1;
 	return (res);
 }
