@@ -11,20 +11,11 @@
  */
 char *_strcpy(char *dest, char *src)
 {
-	/*
-	int n, i = 0;
-	
-	while (*(src+n) != '\0')
+	int i = 0;
+
+	while (*(src + i) != '\0' && *(src + i) == NULL && *(dest + i))
 	{
-		n++;
-	}
-	dest = (char *)malloc(sizeof(char)*n);
-	for (i = 0; i <= n; i++)
-		*(dest+i) = *(src+i);
-	*/
-	int i=0;
-	while (*(src+i)!='\0') {
-		*(dest+i) = *(src+i);
+		*(dest + i) = *(src + i);
 		i++;
 	}
 	return (dest);
