@@ -11,7 +11,7 @@
 int _atoi(char *s)
 {
 	int i, len = 0;
-	int res;
+	unsigned int res;
 
 	len = strlen(s);
 	while (i < len)
@@ -19,10 +19,11 @@ int _atoi(char *s)
 		if (*(s + i) >= 48 && *(s + i) <= 57)
 		{
 			if (*(s + i - 1) == '-')
-				res = res * 10 + itoa(*(s + i)) * -1;
+				res = res * 10 + atoi((s + i)) * -1;
 			else
-				res = res * 10 + itoa(*(s + i));
+				res = res * 10 + atoi((s + i));
 		}
+		i++;
 	}
 	return (res);
 }
