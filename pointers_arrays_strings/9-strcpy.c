@@ -13,7 +13,7 @@ char *_strcpy(char *dest, char *src)
 {
 	unsigned int i = 0;
 
-	while (*(src + i) != '\0' && i < strlen(src))
+	while (*(src + i) != '\0' || i < strlen(src))
 	{
 		*(dest + i) = *(src + i);
 		i++;
