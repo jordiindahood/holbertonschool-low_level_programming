@@ -13,10 +13,10 @@ char *cap_string(char *s)
 	{
 		if (*s <= 'z' && *s >= 'a')
 			*s -= 32;
-		while (*(s + i) <= 'z' && *(s + i) >= 'a')
+		while (s[i] <= 'z' && s[i] >= 'a')
 		{
-			if (*(s + i - 1) == ' ')
-				*(s + i) -= 32;
+			if (s[i-1] == ' ')
+				s[i] -= 32;
 			i++;
 		}
 	}
