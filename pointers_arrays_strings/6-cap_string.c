@@ -7,7 +7,7 @@
  */
 char *cap_string(char *s)
 {
-	int i = 1;
+	int i = 0;
 	int cap;
 	if (*s != '\0')
 	{
