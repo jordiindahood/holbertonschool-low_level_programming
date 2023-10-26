@@ -8,15 +8,14 @@
 char *cap_string(char *s)
 {
 	int i = 1;
+	int cap = 0 ;
 
-	if (*s != '\0')
+		if (*s != '\0')
 	{
-		if (*s <= 'z' && *s >= 'a')
-			*s -= 32;
-		while (s[i] <= 'z' && s[i] >= 'a')
+		while (*(s + i) != '\0' && *(s+i) == ' ')
 		{
-			if (s[i-1] == ' ')
-				s[i] -= 32;
+			if (*(s + i) <= 'z' && *(s + i) >= 'a')
+				*(s + i) -= 32;
 			i++;
 		}
 	}
