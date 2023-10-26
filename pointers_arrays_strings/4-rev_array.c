@@ -10,11 +10,10 @@
 void reverse_array(int *a, int n)
 {
 	int i;
-
 	int str[1000];
 
 	i = 0;
-	if (n != 0)
+	if (n > 0)
 	{
 		do {
 			str[i] = *(a + n - i - 1);
