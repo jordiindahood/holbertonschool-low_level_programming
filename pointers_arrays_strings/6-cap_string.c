@@ -7,14 +7,19 @@
  */
 char *cap_string(char *s)
 {
-	int i = 1; 
-
-		if (*s != '\0')
+	int i = 1;
+	int cap;
+	if (*s != '\0')
 	{
-		while (*(s + i) != '\0' && *(s+i) == ' ')
+		while (*(s + i) != '\0')
 		{
-			if (*(s + i) <= 'z' && *(s + i) >= 'a')
+			if (*(s + i) == ' ' || *(s + i) == '\n' || *(s + i) == '.')
+				cap = 1;
+			if (*(s + i) <= 'z' && *(s + i) >= 'a' && cap == 1)
+			{
 				*(s + i) -= 32;
+				cap--;
+			}
 			i++;
 		}
 	}
