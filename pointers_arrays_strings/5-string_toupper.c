@@ -6,12 +6,14 @@
  * Return: void
  */
 char *string_toupper(char *s)
-{
-	while (*s)
+{	
+	int i;
+
+	while (*(s+i))
 	{
-		if (*s <= 'z' && *s >= 'a')
-			*s -= 32;
-		s++;
+		if (*(s+i) <= 'z' && *(s+i) >= 'a')
+			*(s+i) -= 32;
+		i++;
 	}
-	return (*s);
+	return (s);
 }
