@@ -2,9 +2,10 @@
 #include <stdio.h>
 #include <string.h>
 /**
- * rev_string - check the code
- * Description: reverse a string
- * @s: pointer to the string to be executed
+ * reverse_array - check the code
+ * Description: reverse an array
+ * @a : array of integer
+ * @n : number of elements
  * Return: void
  */
 void reverse_array(int *a, int n)
