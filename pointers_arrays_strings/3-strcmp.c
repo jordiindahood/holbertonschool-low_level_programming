@@ -9,7 +9,19 @@
  * @s2 : pointer to string2
  * Return: int
  */
-char *_strcmp(char *s1, char *s2)
+int *_strcmp(char *s1, char *s2)
 {
-	return (strcmp(s1,s2));
+	int res, i = 0;
+
+	while (*s1 != '\0' && *s2 != '\0' && res == 0)
+	{
+		res = *s2 - *s1;
+		s1++;
+		s2++;
+	}
+	if (res > 0)
+		res = 1;
+	else if (res < 0)
+		res = -1;
+	return (res);
 }
