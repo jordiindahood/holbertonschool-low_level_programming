@@ -5,7 +5,7 @@
  * @s: pointer to the string to be executed
  * Return: void
  */
-void *string_toupper(char *s)
+char *string_toupper(char *s)
 {
 	while (*s)
 	{
@@ -13,4 +13,5 @@ void *string_toupper(char *s)
 			*s -= 32;
 		s++;
 	}
+	return (s);
 }
