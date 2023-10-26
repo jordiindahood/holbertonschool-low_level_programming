@@ -13,7 +13,7 @@ char *cap_string(char *s)
 	{
 		while (*(s + i) != '\0')
 		{
-			if (*(s + i) == ' ' || *(s + i) == '\n' || *(s + i) == '.')
+			if (cap == 0 && *(s + i) == ' ')
 				cap = 1;
 			if (*(s + i) <= 'z' && *(s + i) >= 'a' && cap == 1)
 			{
