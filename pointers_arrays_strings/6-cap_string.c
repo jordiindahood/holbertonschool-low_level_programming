@@ -15,11 +15,13 @@ char *cap_string(char *s)
 		s[0] -= 32;
 	for (i = 0; i < l; i++)
 	{
-		if ((s[i] == ' ' ||(s[i] == '.' || s[i] == '\t' || s[i] == '\n') )&& cap == 0)
+		if ((s[i] == '\t' || s[i] == '\n') && cap == 0)
 			cap = 1;
-		else if (*(s + i) <= 'z' && *(s + i) >= 'a' && cap != 0)
+		else if ((s[i] == ' ' || s[i] == '.') && cap == 0)
+			cap = 1;
+		else if (s[i] <= 'z' && s[i] >= 'a' && cap != 0)
 		{
-			*(s + i) -= 32;
+			s[i] -= 32;
 			cap = 0;
 		}
 		else
