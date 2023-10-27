@@ -7,7 +7,7 @@
  */
 char *leet(char *s)
 {
-	int i, cap, l = 0;
+	int i, l = 0;
 
 	while (*(s + l))
 		l++;
