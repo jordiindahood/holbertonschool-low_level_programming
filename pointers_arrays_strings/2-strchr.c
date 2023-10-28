@@ -15,6 +15,6 @@ char *_strchr(char *s, char c)
 		s++;
 	}
 	if (*s == '\n')
-		*s == NULL;
+		*s = NULL;
 	return (s);
 }
