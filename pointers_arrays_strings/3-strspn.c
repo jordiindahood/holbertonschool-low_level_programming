@@ -6,6 +6,13 @@
  * @accept : string containnig the carachters to match
  * Return: unsignet int
  */
+/**
+ * _strcmp - check the code
+ * Description: compare two strings
+ * @s1 : pointer to string1
+ * @s2 : pointer to string2
+ * Return: int
+ */
 unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int res = 0;
@@ -14,7 +21,7 @@ unsigned int _strspn(char *s, char *accept)
 	len = strlen(accept);
 	while (*(s + i))
 	{
-		if (_strcmp(s + i + len, accept) == 0)
+		if (_strcmp(s + i + len, accept) <= 0)
 			res = len;
 		i++;
 	}
