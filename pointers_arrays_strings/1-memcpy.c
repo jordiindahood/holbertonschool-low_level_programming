@@ -2,8 +2,8 @@
 /**
  * _memcpy - check the code
  * Description: copy a memory area
- * @s : pointer
- * @b : charachter to be copied
+ * @src : pointer to string to be copied
+ * @dest : pointer to destination
  * @n : number of bytes
  * Return: char*
  */
