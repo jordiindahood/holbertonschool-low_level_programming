@@ -14,7 +14,7 @@ unsigned int _strspn(char *s, char *accept)
 	len = strlen(accept);
 	while (*(s + i))
 	{
-		if (s[i + len] == *accept)
+		if (_strcmp(s[i + len] , *accept)==0)
 			res = len;
 		i++;
 	}
