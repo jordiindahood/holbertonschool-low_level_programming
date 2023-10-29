@@ -8,15 +8,11 @@
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int res = 0;
-	int len, i = 0;
+	unsigned int j, i = 0;
 
-	len = strlen(accept);
-	while (*(s + i))
-	{
-		if (_strcmp(s + i + len, accept) == 0)
-			res = len;
-		i++;
-	}
-	return (res);
+	for (i = 0; s[i] != '\0'; i++)
+		for (j = 0; accept[j] != s[i]; j++)
+			if (accept[j] == '\0')
+				return (i);
+	return (i);
 }
