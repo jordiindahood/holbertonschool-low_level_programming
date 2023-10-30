@@ -5,13 +5,13 @@
  * @s : pointer to string
  * Return: Void
  */
-void _puts_rev_recursion(char *s)
+void _print_rev_recursion(char *s)
 {
 	if (*s)
 	{
 		int n = strlen(s);
 		_putchar(*(s + n));
 		s++;
-		_puts_recursion(s);
+		_print_rev_recursion(s);
 	}
 }
