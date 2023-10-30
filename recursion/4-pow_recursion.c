@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _pow_recusion - check the code
+ * _pow_recursion - check the code
  * Description: count the x power y
  * @x : int
  * @y : int
