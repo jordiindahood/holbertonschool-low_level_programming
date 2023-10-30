@@ -1,8 +1,9 @@
 #include "main.h"
 /**
- * factorial - check the code
- * Description: count the factorial of int
- * @n : int
+ * _pow_recusion - check the code
+ * Description: count the x power y
+ * @x : int
+ * @y : int
  * Return: int
  */
 int _pow_recursion(int x, int y)
@@ -12,5 +13,5 @@ int _pow_recursion(int x, int y)
 	else if (y == 0)
 		return (1);
 	else
-		return (x / _pow_recursion(x, y + 1));
+		return (-1);
 }
