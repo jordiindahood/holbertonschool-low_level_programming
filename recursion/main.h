@@ -12,4 +12,4 @@ int _pow_recursion(int x, int y);
 int _sqrt_recursion(int n);
 int square(unsigned long x, unsigned long y);
 int is_prime_number(int n);
-int div(int x, int y);
+int prime_check(int x, int y);
