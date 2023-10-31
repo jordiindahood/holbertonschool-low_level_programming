@@ -10,7 +10,7 @@ int _sqrt_recursion(int n)
 	return (square(n, 1));
 }
 
-int square(int x, int y)
+int square(int x, double int y)
 {
 	if (y * y == x)
 		return (y);
