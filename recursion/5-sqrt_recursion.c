@@ -15,9 +15,9 @@ int _sqrt_recursion(int n)
 /**
  * square - check the code
  * Description : check if @y squared is @x
- * @x : int
- * @y : int
- * Return : int
+ * @x : unsigned long
+ * @y : unsigned long
+ * Return: int
  */
 int square(unsigned long x, unsigned long y)
 {
