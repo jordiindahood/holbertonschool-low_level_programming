@@ -5,12 +5,6 @@
  * @n : int
  * Return: int
  */
-/**
- * square - check the code
- * Description : check if @y squared is @x
- * Return : int
- */
-
 int _sqrt_recursion(int n)
 {
 	if (n > 0)
@@ -18,7 +12,11 @@ int _sqrt_recursion(int n)
 	else
 		return (-1);
 }
-
+/**
+ * square - check the code
+ * Description : check if @y squared is @x
+ * Return : int
+ */
 int square(unsigned long x, unsigned long y)
 {
 	if (y * y == x)
