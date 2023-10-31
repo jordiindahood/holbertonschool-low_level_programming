@@ -5,9 +5,18 @@
  * @n : int
  * Return: int
  */
+/**
+ * square - check the code
+ * Description : check if @y squared is @x
+ * Return : int
+ */
+
 int _sqrt_recursion(int n)
 {
-	return (square(n, 1));
+	if (n > 0)
+		return (square(n, 1));
+	else
+		return (-1);
 }
 
 int square(unsigned long x, unsigned long y)
