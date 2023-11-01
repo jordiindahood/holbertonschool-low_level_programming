@@ -1,5 +1,3 @@
 #!/bin/bash
-SRC = *.c
-OBJ = ${SRC:.c=.o}
-gcc -c ${SRC} -o
-ar -rc liball.a ${OBJ}
+find .. -type f -name '*.c' -exec gcc -c {} \;
+ar -rc libmylib.a *.o
