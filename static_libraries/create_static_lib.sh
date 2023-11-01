@@ -1,5 +1,5 @@
 #!/bin/bash
-SRC = ~.c
+SRC = *.c
 OBJ = ${SRC:.c=.o}
 gcc -c ${SRC} -o
 ar -rc liball.a ${OBJ}
