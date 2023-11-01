@@ -1,2 +1,4 @@
-find . -type f -name '*.c' -exec gcc -c {}
-ar -rc libmylib.a *.o
+SRC = ~.c
+OBJ = ${SRC:.c=.o}
+gcc -c ${SRC} -o
+ar -rcs libmylib.a ${OBJ}
