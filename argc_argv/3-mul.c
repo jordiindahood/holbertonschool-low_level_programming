@@ -8,7 +8,10 @@
 int main(int argc, char *argv[])
 {
 	if (argc == 2)
-		printf("%d\n", *(argv + argc) * (*(argv + argc - 1)));
+	int a = argv[1];
+	int b = argv[2];
+	int res = a*b;
+		printf("%d\n", res);
 	else
 		printf("Error\n");
 	return (0);
