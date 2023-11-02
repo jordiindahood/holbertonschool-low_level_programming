@@ -8,10 +8,13 @@
 int main(int argc, char *argv[])
 {
 	if (argc == 2)
-	int a = argv[1];
-	int b = argv[2];
-	int res = a*b;
+	{
+		unsigned int a = argv[1];
+		unsigned int b = argv[2];
+		unsigned int res = a * b;
+	
 		printf("%d\n", res);
+	}
 	else
 		printf("Error\n");
 	return (0);
