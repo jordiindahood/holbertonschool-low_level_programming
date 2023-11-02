@@ -7,6 +7,10 @@
  */
 int main(int argc, char *argv[])
 {
-	printf("%d\n", argc -1);
+	int i;
+
+	for (i = 0; i < argc; i++)
+		if (argv[i] != '\0')
+			printf("%d\n", i);
 	return (0);
 }
