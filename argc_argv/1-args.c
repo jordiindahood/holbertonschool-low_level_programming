@@ -7,10 +7,10 @@
  */
 int main(int argc, char *argv[])
 {
-	int i=0;
+	int i = 0;
 
 	while (i < argc && *argv[i] != 0)
 		i++;
-	printf("%d\n", i);
+	printf("%d\n", i - 1);
 	return (0);
 }
