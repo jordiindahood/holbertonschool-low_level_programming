@@ -7,12 +7,12 @@
  */
 int main(int argc, char *argv[])
 {
-	if (argc == 2)
+	if (argc == 3)
 	{
-		unsigned int a = atoi(*argv[1]);
-		unsigned int b = atoi(*argv[2]);
+		unsigned int a = atoi(argv[1]);
+		unsigned int b = atoi(argv[2]);
 		unsigned int res = a * b;
-	
+
 		printf("%d\n", res);
 	}
 	else
