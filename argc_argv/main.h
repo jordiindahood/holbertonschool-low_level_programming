@@ -13,3 +13,4 @@ int _sqrt_recursion(int n);
 int square(unsigned long x, unsigned long y);
 int is_prime_number(int n);
 int prime_check(int x, int y);
+int numberize(char *s);
