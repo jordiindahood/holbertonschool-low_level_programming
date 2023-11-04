@@ -17,12 +17,15 @@ int main(void)
         {
             for (j = 48; j < 58 && space == 0; j++)
             {
-                if (k * 100 + i * 10 + j < i * 100 + k * 10 + j)
+                if (i * 10 + j < j * 10 + i)
                 {
-                    putchar(k);
-                    putchar(i);
-                    putchar(j);
-                    space = 1;
+                    if (k * 100 + i * 10 + j < i * 100 + k * 10 + j)
+                    {
+                        putchar(k);
+                        putchar(i);
+                        putchar(j);
+                        space = 1;
+                    }
                 }
                 if (space == 1 && (k * 100 + i * 10 + j) < 6117)
                 {
