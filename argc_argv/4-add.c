@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
 }
 /**
  * numberize - turn string of numbers to an actual number
- *@argv : array of strings ;
+ *@s : array of strings ;
  * Return: int
  */
 int numberize(char *s)
