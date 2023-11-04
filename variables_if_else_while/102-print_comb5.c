@@ -20,17 +20,14 @@ int main(void)
 				{
 					if (y * 10 + x < i * 10 + j)
 					{
-						if (i * 10 + j <= j * 10 + i)
-						{
-							putchar(y);
-							putchar(x);
-							putchar(' ');
-							putchar(i);
-							putchar(j);
-							space = 1;
-						}
+						putchar(y);
+						putchar(x);
+						putchar(' ');
+						putchar(i);
+						putchar(j);
+						space = 1;
 					}
-					if (space == 1 )
+					if (space == 1)
 					{
 						putchar(',');
 						putchar(' ');
