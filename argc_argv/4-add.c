@@ -10,6 +10,7 @@ int main(int argc, char *argv[])
 	int i = 1;
 	int res = 0;
 	unsigned j;
+
 	if (argc == 1)
 	{
 		printf("\n");
@@ -27,7 +28,7 @@ int main(int argc, char *argv[])
 					return (1);
 				}
 			}
-			res = res + numberize(*(argv+i));
+			res = res + numberize(*(argv + i));
 		}
 	}
 	printf("%d\n", res);
