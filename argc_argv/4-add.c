@@ -9,7 +9,7 @@ int main(int argc, char *argv[])
 {
 	int i = 1;
 	int res = 0;
-	unsigned j;
+	unsigned int j;
 
 	if (argc == 1)
 	{
