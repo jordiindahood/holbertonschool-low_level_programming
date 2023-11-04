@@ -27,7 +27,7 @@ int main(void)
 						putchar(j);
 						space = 1;
 					}
-					if (space == 1)
+					if (space == 1 && y * 1000 + x * 100 + i * 10 + j < 63227)
 					{
 						putchar(',');
 						putchar(' ');
