@@ -10,5 +10,5 @@ char *create_array(unsigned int size, char c)
 	if (size < 1)
 		return (NULL);
 	else
-		return (malloc(sizeof(size)));
+		return (malloc(sizeof(c)*size));
 }
