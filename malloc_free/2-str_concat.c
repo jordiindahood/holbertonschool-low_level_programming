@@ -6,8 +6,9 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-    unsigned int size1, size2, i,j = 0;
+    unsigned int size1, size2 = 0;
     char *p;
+    unsigned int i = 0;
 
     if (s1 == NULL && s2 == NULL)
         return (NULL);
@@ -21,9 +22,8 @@ char *str_concat(char *s1, char *s2)
         if (i < size1)
             p[i] = s1[i];
         else
-            p[i] = s2[j];
+            p[i] = s2[i - size1];
         i++;
-        j++;
     }
     return (p);
 }
