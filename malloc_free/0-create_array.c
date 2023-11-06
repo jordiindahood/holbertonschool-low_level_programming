@@ -2,13 +2,24 @@
 /**
  * create_array - initialize an array with n number of cases
  *@size: number of cases
- *@char: char
+ *@c: char
  * Return: ptr.
  */
 char *create_array(unsigned int size, char c)
 {
+	int i = 0;
+	char *p;
+
 	if (size < 1)
 		return (NULL);
 	else
-		return (malloc(sizeof(c)*size));
+	{
+		p = malloc(sizeof(char) * size);
+		while (i < size)
+		{
+			p[i] = c;
+			i++;
+		}
+		return (p);
+	}
 }
