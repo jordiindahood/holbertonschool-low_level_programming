@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * string_noncat - concat two strings
+ * string_nconcat - concat two strings
  *@s1: string1
  *@s2: string2
  *@n: number of first characters of s2
@@ -27,7 +27,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (n > strlen(s2))
 		n = strlen(s2);
 	do
-		p = malloc(sizeof(char) * (size1 + n ));
+		p = malloc(sizeof(char) * (size1 + n + 1));
 	while (p == NULL);
 	while (s2 == NULL && i < size1)
 	{
