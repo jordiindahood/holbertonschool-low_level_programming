@@ -29,23 +29,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	do
 		p = malloc(sizeof(char) * (size1 + n + 1));
 	while (p == NULL);
-	while (s2 == NULL && i < size1)
-	{
-		p[i] = s1[i];
-		i++;
-	}
-	while (s1 == NULL && i < n)
-	{
-		p[i] = s2[i];
-		i++;
-	}
-	while (i < size1 + n + 1 && s1 != NULL && s2 != NULL)
-	{
-		if (i < size1)
-			p[i] = s1[i];
-		else
-			p[i] = s2[i - size1];
-		i++;
-	}
+	p = strncat(s1,s2,n);
 	return (p);
 }
