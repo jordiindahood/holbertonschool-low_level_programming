@@ -8,7 +8,7 @@
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int size1, size2 = 0;
+	unsigned int size1 = 0;
 	char *p;
 	unsigned int i = 0;
 
@@ -34,12 +34,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		p[i] = s1[i];
 		i++;
 	}
-	while (s1 == NULL && i < size2)
+	while (s1 == NULL && i < n)
 	{
 		p[i] = s2[i];
 		i++;
 	}
-	while (i < size1 + n  && s1 != NULL && s2 != NULL)
+	while (i < size1 + n + 1 && s1 != NULL && s2 != NULL)
 	{
 		if (i < size1)
 			p[i] = s1[i];
