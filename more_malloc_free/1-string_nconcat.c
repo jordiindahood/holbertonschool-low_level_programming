@@ -8,30 +8,44 @@
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
+	unsigned int size1, size2 = 0;
 	char *p;
-	unsigned int size1, i=0;
+	unsigned int i = 0;
+
 	if (s1 == NULL)
 	{
-		s1 = "";
+		s1 = "\0";
 		size1 = 1;
 	}
-	else
-		size1 = strlen(s1);
 	if (s2 == NULL)
 	{
-		s2 = "";
+		s2 = "\0";
 		n = 1;
 	}
-	if (n >= strlen(s2))
+	if (s1 != NULL)
+		size1 = strlen(s1);
+	if (n > strlen(s2))
 		n = strlen(s2);
-	p = malloc(size1 + n);
-	if (p == NULL)
-		return(NULL);
-	else
-		while (i < size1 + n)
-			if (i<size1)
-				p[i] = s1[i];
-			else
-				p[i]=s2[i-size1]; 
+	do
+		p = malloc(sizeof(char) * (size1 + n + 1));
+	while (p == NULL);
+	while (s2 == NULL && i < size1)
+	{
+		p[i] = s1[i];
+		i++;
+	}
+	while (s1 == NULL && i < size2)
+	{
+		p[i] = s2[i];
+		i++;
+	}
+	while (i < size1 + size2 + 1 && s1 != NULL && s2 != NULL)
+	{
+		if (i < size1)
+			p[i] = s1[i];
+		else
+			p[i] = s2[i - size1];
+		i++;
+	}
 	return (p);
 }
