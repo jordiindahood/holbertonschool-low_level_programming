@@ -7,10 +7,10 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	char *p;
+	unsigned int *p;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
-	p = calloc(nmemb, sizeof(int));
+	p = (void *)calloc(nmemb, sizeof(int));
 	return (p);
 }
