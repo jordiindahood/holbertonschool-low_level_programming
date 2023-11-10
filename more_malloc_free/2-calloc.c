@@ -1,9 +1,8 @@
 #include "main.h"
 /**
- * string_nconcat - concat two strings
- *@s1: string1
- *@s2: string2
- *@n: number of first characters of s2
+ * _calloc - allocate memory of an array
+ *@nmemb: unsigned int
+ *@size: unsigned int
  * Return: void*
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
@@ -12,6 +11,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
-	p = (void *)calloc(nmemb,sizeof(unsigned int));
+	p = (void *)calloc(nmemb, sizeof(unsigned int));
 	return (p);
 }
