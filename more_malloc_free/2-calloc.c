@@ -8,9 +8,10 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-    char *p;
+	char *p;
 
-    if (nmemb==0 || size==0)
-        return(NULL);
-    char=calloc(sizeof(nmemb)*size);
+	if (nmemb == 0 || size == 0)
+		return (NULL);
+	p = (void *)calloc(sizeof(nmemb) * size);
+	return (p);
 }
