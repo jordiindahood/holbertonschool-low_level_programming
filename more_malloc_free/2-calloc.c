@@ -9,8 +9,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	unsigned int *p;
 
-	if (nmemb == 0 || size == 0)
-		return (NULL);
 	p = (void *)calloc(nmemb, sizeof(int));
 	return (p);
 }
