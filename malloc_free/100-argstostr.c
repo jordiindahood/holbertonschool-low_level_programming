@@ -15,14 +15,14 @@ char *argstostr(int ac, char **av)
 	if (ac == 0 || av == NULL)
 		return (NULL);
 
-	for (i = 1; i < ac; i++)
+	for (i = 0; i < ac; i++)
 	{
 		len += strlen(av[i]);
 	}
 
 	p=_all_args = (char *)malloc(len + ac - 1);
 
-	for (i = 1; i < ac; i++)
+	for (i = 0; i < ac; i++)
 	{
 		memcpy(_all_args, av[i], strlen(av[i]));
 		_all_args += strlen(av[i]) + 1;
