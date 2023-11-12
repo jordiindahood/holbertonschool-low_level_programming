@@ -20,7 +20,7 @@ char *argstostr(int ac, char **av)
 		len += strlen(av[i]);
 	}
 
-	p = _all_args = (char *)malloc(len + ac - 1);
+	p = _all_args = (char *)malloc(len + ac + 1);
 	if (p == NULL)
 		return (NULL);
 	for (i = 0; i < ac; i++)
