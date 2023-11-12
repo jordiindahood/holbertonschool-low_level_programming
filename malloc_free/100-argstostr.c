@@ -8,32 +8,22 @@
  */
 char *argstostr(int ac, char **av)
 {
-	int i, j;
-	int k, len = 0;
-	char **p;
+	unsigned int i;
+	size_t len = 0;
+	char *_all_args;
 
-	if (ac == 0 || av == NULL)
-		return (NULL);
-	
-	p=(char**)malloc(ac*sizeof(char*));
-	
 	for (i = 1; i < ac; i++)
 	{
-		len = strlen(av[i]) + 1;
-		p[i] = (char *)malloc(len);
+		len += strlen(av[i]);
 	}
-	if (p == NULL)
-		return (NULL);
 
-	for (i = 0; i < ac; i++)
+	_all_args = (char *)malloc(len + ac - 1);
+
+	for (i = 1; i < ac; i++)
 	{
-		for (j = 0; j < strlen(av[i]); j++)
-		{
-			p[i][k]=av[i][j];
-			k++;
-		}
-		strcpy(p[k], "\n");
-		k++;
+		memcpy(_all_args, av[i], strlen(av[i]));
+		_all_args += strlen(av[i]) + 1;
+		*(_all_args - 1) = '\n';
 	}
-	return (p);
+	return (_all_args);
 }
