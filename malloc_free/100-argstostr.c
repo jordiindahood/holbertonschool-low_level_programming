@@ -10,14 +10,17 @@ char *argstostr(int ac, char **av)
 {
 	int i;
 	size_t len = 0;
-	char *_all_args;
+	char* _all_args,p;
+
+	if (ac == 0 || av == NULL)
+		return (NULL);
 
 	for (i = 1; i < ac; i++)
 	{
 		len += strlen(av[i]);
 	}
 
-	_all_args = (char *)malloc(len + ac - 1);
+	p=_all_args = (char *)malloc(len + ac - 1);
 
 	for (i = 1; i < ac; i++)
 	{
@@ -25,5 +28,5 @@ char *argstostr(int ac, char **av)
 		_all_args += strlen(av[i]) + 1;
 		*(_all_args - 1) = '\n';
 	}
-	return (_all_args);
+	return (p);
 }
