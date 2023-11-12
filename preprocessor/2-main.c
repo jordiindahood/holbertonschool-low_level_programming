@@ -2,9 +2,9 @@
 #include <stdio.h>
 /**
  * main - print the file name
- * return: 0
+ * Return: 0
  */
-int main()
+int main(void)
 {
 	puts(__FILE__);
 	return (0);
