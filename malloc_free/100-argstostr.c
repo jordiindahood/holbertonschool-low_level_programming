@@ -8,15 +8,20 @@
  */
 char *argstostr(int ac, char **av)
 {
-	int i, j, k, len = 0;
+	unsigned int i, j, k, len = 0;
 	char *p;
+
 	if (ac == 0 || av == NULL)
 		return (NULL);
+
 	for (i = 1; i < ac; i++)
 		len = +strlen(av[i]) + 1;
+
 	p = malloc(len);
+
 	if (p == NULL)
 		return (NULL);
+
 	for (i = 0; i < ac; i++)
 	{
 		for (j = 0; j < strlen(av[i]); j++)
