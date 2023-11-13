@@ -4,11 +4,8 @@
 #include "dog.h"
 
 /**
- * init_dog - initialize a variable type "struct dog"
+ * print_dog - print a "struct dog"
  * @d: struct dog *
- * @name: char *
- * @age: float
- * @owner: char*
  * Return: void
  */
 void print_dog(struct dog *d)
