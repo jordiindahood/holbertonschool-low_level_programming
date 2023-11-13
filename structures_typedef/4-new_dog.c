@@ -46,6 +46,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 char *_strcpy(char *dest, char *src)
 {
 	int len, i;
+
 	len = 0;
 
 	while (src[len] != '\0')
