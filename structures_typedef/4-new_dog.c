@@ -11,11 +11,11 @@
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *doggy;
+	dog_t doggy;
 
-	strcpy(doggy->name, name);
-	doggy->age = age;
-	strcpy(doggy->owner, owner);
+		doggy.name = *name;
+		doggy.age = age;
+		doggy.owner = *owner;
 
-	return (doggy);
+    return(&doggy);
 }
