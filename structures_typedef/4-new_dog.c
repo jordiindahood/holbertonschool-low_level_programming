@@ -21,27 +21,9 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 
-	d->name = _strcpy(d->name, name);
+	d->name = name;
 	d->age = age;
-	d->owner = strcpy(d->owner, owner);
+	d->owner = owner;
 
 	return (d);
-}
-/**
- * _strcpy - check the code
- * Description: copy an array to another
- * @dest : pointer to destination array
- * @src : pointer to be copied
- * Return: char*
- */
-char *_strcpy(char *dest, char *src)
-{
-	unsigned int i = 0;
-
-	while (i <= strlen(src))
-	{
-		*(dest + i) = *(src + i);
-		i++;
-	}
-	return (dest);
 }
