@@ -16,17 +16,20 @@ int (*get_op_func(char *s))(int a, int b)
 		{"/", op_div},
 		{"%", op_mod},
 		{NULL, NULL}};
-	int i;
+	int i = 0;
 
-	for (i = 0; i < 6; i++)
+	while (i < 6)
 	{
-		if (ops[i].op == s)
+		if (strcmp(ops[i].op, s) == 0)
+		{
 			return (ops[i].f);
+		}
 		else if (i == 5)
 		{
 			printf("Error\n");
 			exit(99);
 		}
+		i++;
 	}
-	return(0);
+	return (0);
 }
