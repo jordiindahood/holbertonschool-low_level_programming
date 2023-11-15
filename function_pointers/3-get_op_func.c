@@ -7,7 +7,7 @@
  * @b: int
  * Return: int
  */
-int (*get_op_func(char *s))(int a, int b)
+int (*get_op_func(char *s))(int , int )
 {
 	op_t ops[] = {
 		{"+", op_add},
@@ -16,19 +16,13 @@ int (*get_op_func(char *s))(int a, int b)
 		{"/", op_div},
 		{"%", op_mod},
 		{NULL, NULL}};
-	int i = 0;
+	int i;
 
+	i = 0;
 	while (i < 6)
 	{
 		if (strcmp(ops[i].op, s) == 0)
-		{
 			return (ops[i].f);
-		}
-		else if (i == 5)
-		{
-			printf("Error\n");
-			exit(99);
-		}
 		i++;
 	}
 	return (0);
