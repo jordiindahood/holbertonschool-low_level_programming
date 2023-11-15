@@ -3,8 +3,6 @@
 /**
  * get_op_func - execute a specific operation
  * @s: struct dog *
- * @a: int
- * @b: int
  * Return: int
  */
 int (*get_op_func(char *s))(int, int)
@@ -19,9 +17,9 @@ int (*get_op_func(char *s))(int, int)
 	int i;
 
 	i = 0;
-	while (i < 6 && i != 5 )
+	while (i < 6 && i != 5)
 	{
-		if (strcmp(ops[i].op, s) == 0 )
+		if (strcmp(ops[i].op, s) == 0)
 			return (ops[i].f);
 		i++;
 	}
