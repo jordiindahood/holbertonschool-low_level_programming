@@ -2,7 +2,7 @@
 #include <stdarg.h>
 /**
  * print_all - print all the arguments
- * @separator: const char *const
+ * @format: const char *const
  * Return: none
  */
 void print_all(const char *const format, ...)
