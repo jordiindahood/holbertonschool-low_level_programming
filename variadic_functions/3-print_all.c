@@ -1,10 +1,9 @@
 #include "variadic_functions.h"
 #include <stdarg.h>
 /**
- * print_strings - print all the arguments
- * @separator: const char *
- * @n : const unsigned int
- * Return: int
+ * print_all - print all the arguments
+ * @separator: const char *const
+ * Return: none
  */
 void print_all(const char *const format, ...)
 {
@@ -12,7 +11,6 @@ void print_all(const char *const format, ...)
 	char *separator1 = "";
 	char *separator2 = ", ";
 	va_list argm;
-
 	print T[] = {
 		{'c', op_char},
 		{'i', op_int},
@@ -20,6 +18,7 @@ void print_all(const char *const format, ...)
 		{'s', op_string},
 		{'\0', NULL},
 	};
+
 	va_start(argm, format);
 	while (format && format[i])
 	{
@@ -39,19 +38,38 @@ void print_all(const char *const format, ...)
 	printf("\n");
 	va_end(argm);
 }
-
+/**
+ * op_char - print a character
+ * @s: va_list
+ * Return: void
+ */
 void op_char(va_list s)
 {
 	printf("%c", va_arg(s, int));
 }
+/**
+ * op_int - print a integer
+ * @s: va_list
+ * Return: void
+ */
 void op_int(va_list s)
 {
 	printf("%d", va_arg(s, int));
 }
+/**
+ * op_float - print a float
+ * @s: va_list
+ * Return: void
+ */
 void op_float(va_list s)
 {
 	printf("%f", va_arg(s, double));
 }
+/**
+ * op_string - print a string
+ * @s: va_list
+ * Return: void
+ */
 void op_string(va_list s)
 {
 	char *str;
