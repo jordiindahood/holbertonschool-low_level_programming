@@ -23,13 +23,14 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	printf("\n");
 }
 /**
- * string - return a string
+ * stringnil - return a string
  * @s: char*
  * Return: char*
  */
 char *stringnil(char *s)
 {
 	char *no = "(nil)";
+
 	if (s == NULL)
 		return (no);
 	return (s);
