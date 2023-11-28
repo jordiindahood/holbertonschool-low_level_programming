@@ -1,10 +1,8 @@
 #include "lists.h"
 /**
- * _putchar - writes the character c to stdout
- * @c: The character to print
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
+ * print_list - print all the elements of a list
+ * @h: const list_t *
+ * Return: size_t number of elements.
  */
 size_t print_list(const list_t *h)
 {
