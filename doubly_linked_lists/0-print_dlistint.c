@@ -11,13 +11,10 @@ size_t print_dlistint(const dlistint_t *h)
 
 	if (h)
 	{
-		p = (list_t *)h;
+		p = (dlistint_t *)h;
 		while (p)
 		{
-			if (!p->str)
-				printf("[%d] (nil)\n", p->len);
-			else
-				printf("[%d] %s\n", p->len, p->str);
+				printf("%d\n", p->n);
 			p = p->next;
 			i++;
 		}
