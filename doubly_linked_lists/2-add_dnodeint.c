@@ -10,18 +10,19 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 	/*initializing p*/
 	dlistint_t *p;
 
-	do
-		p = malloc(sizeof(dlistint_t));
-	while (p == NULL);
+	p = malloc(sizeof(dlistint_t));
+	if (p == NULL)
+		return(NULL);
 
 	/*inserting data*/
 	p->n = n;
 
 	/*adding the node in the beginnig of the linked list*/
 	p->next = *head;
+	p->prev = NULL;
 
 	/*making the new node the head pointer of the list */
 	*head = p;
-
-	return (*head);
+	(**head).prev = p;
+	return (p);
 }
