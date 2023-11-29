@@ -19,10 +19,10 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 
 	/*adding the node in the beginnig of the linked list*/
 	p->next = *head;
+	(*head)->prev = p;
 
 	/*making the new node the head pointer of the list */
 	*head = p;
-	p->prev = *head;
 
 	return (*head);
 }
