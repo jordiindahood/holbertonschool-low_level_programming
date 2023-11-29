@@ -1,18 +1,18 @@
 #include "lists.h"
 /**
- * add_node - add a node the list
+ * add_dnodeint - add a node at the beginnig of the list
  * @head: list_t **
- * @str: const char *
- * Return: size_t number of elements.
+ * @n: const int
+ * Return:  dlistint_t
  */
-list_t *add_node(list_t **head, const int n)
+dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
 	/*initializing p*/
 	dlistint_t *p;
 
-	do {
-	p = malloc(sizeof(dlistint_t));
-	} while (p == NULL);
+	do
+		p = malloc(sizeof(dlistint_t));
+	while (p == NULL);
 
 	/*inserting data*/
 	p->len = n;
