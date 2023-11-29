@@ -12,14 +12,16 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 
 	p = malloc(sizeof(dlistint_t));
 	if (p == NULL)
-		return(NULL);
+		return (NULL);
 
 	/*inserting data*/
 	p->n = n;
 
 	/*adding the node in the beginnig of the linked list*/
 	p->next = *head;
-	(*head)->prev = p;
+	p->prev = NULL;
+	if (*head != NULL)
+		(*head)->prev = p;
 
 	/*making the new node the head pointer of the list */
 	*head = p;
