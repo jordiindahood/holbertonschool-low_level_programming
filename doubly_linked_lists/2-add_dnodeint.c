@@ -15,7 +15,7 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 	while (p == NULL);
 
 	/*inserting data*/
-	p->len = n;
+	p->n = n;
 
 	/*adding the node in the beginnig of the linked list*/
 	p->next = *head;
