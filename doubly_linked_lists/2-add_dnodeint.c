@@ -20,6 +20,7 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 	/*adding the node in the beginnig of the linked list*/
 	p->next = *head;
 	p->prev = NULL;
+
 	if (*head != NULL)
 		(*head)->prev = p;
 
