@@ -11,46 +11,36 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	dlistint_t *node, *p, *q;
 	unsigned int i;
 
-	node = malloc(sizeof(dlistint_t));
-	if (node)
-		return (NULL);
-	node->n = n;
-
-	if (*h == NULL)
-	{
-		*h = node;
-		return (*h);
-	}
-
-	p = *h;
-	q = *h;
-	i = 0;
-
-	if (idx == 0)
+	if (idx == 0 || *h == NULL)
 		return (add_dnodeint(h, n));
 
 	if (idx == (unsigned int)dlistint_len(*h))
 		return (add_dnodeint_end(h, n));
-
-	while (p != NULL)
+	else
 	{
-		if (i == idx)
-			break;
-		p = p->next;
-		i++;
+		node = malloc(sizeof(dlistint_t *));
+		if (node == NULL)
+			return (NULL);
+		node->n = n;
+
+		p = *h;
+		q = *h;
+
+		for (i = 0; i <= idx && p->next; i++)
+		{
+			if (i == idx)
+			{
+				q = p->next;
+				node->prev = p;
+				p->next = node;
+				node->next = q;
+				q->prev = node;
+				return (node);
+			}
+			p = p->next;
+		}
 	}
-
-	if (p->next == NULL)
-		return (NULL);
-
-	q = p->next;
-
-	p->next = node;
-	node->next = q;
-	q->prev = node;
-	node->prev = p;
-
-	return (*h);
+	return (NULL);
 }
 /**
  * dlistint_len - return the number of elements in a the list
