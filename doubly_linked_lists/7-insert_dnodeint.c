@@ -41,7 +41,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		}
 		p = p->next;
 	}
-	return (node);
+	return (NULL);
 }
 /**
  * dlistint_len - return the number of elements in a the list
