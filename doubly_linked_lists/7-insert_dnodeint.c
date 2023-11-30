@@ -18,7 +18,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		return (add_dnodeint_end(h, n));
 	else
 	{
-		node = malloc(sizeof(dlistint_t *));
+		node = malloc(sizeof(dlistint_t));
 		if (node == NULL)
 			return (NULL);
 		node->n = n;
@@ -40,7 +40,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 			p = p->next;
 		}
 	}
-	return (NULL);
+	return (node);
 }
 /**
  * dlistint_len - return the number of elements in a the list
