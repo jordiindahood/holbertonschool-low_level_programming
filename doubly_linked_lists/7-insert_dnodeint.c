@@ -1,7 +1,7 @@
 #include "lists.h"
 /**
  * insert_dnodeint_at_index - insert a data at a specific node
- * @head: dlistint_t **
+ * @h: dlistint_t **
  * @idx: unsigned int
  * @n: int
  * Return: dlistint_t
@@ -11,34 +11,35 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	dlistint_t *node, *p, *q;
 	unsigned int i;
 
+	if (idx > dlistint_len(*h))
+		return (NULL);
+
 	if (idx == 0 || *h == NULL)
 		return (add_dnodeint(h, n));
 
 	if (idx == (unsigned int)dlistint_len(*h))
 		return (add_dnodeint_end(h, n));
-	else
+
+	node = malloc(sizeof(dlistint_t));
+	if (node == NULL)
+		return (NULL);
+	node->n = n;
+
+	p = *h;
+	q = *h;
+
+	for (i = 0; i <= idx && p->next; i++)
 	{
-		node = malloc(sizeof(dlistint_t));
-		if (node == NULL)
-			return (NULL);
-		node->n = n;
-
-		p = *h;
-		q = *h;
-
-		for (i = 0; i <= idx && p->next; i++)
+		if (i == idx)
 		{
-			if (i == idx)
-			{
-				q = p->next;
-				node->prev = p;
-				p->next = node;
-				node->next = q;
-				q->prev = node;
-				return (node);
-			}
-			p = p->next;
+			q = p->next;
+			node->prev = p;
+			p->next = node;
+			node->next = q;
+			q->prev = node;
+			return (node);
 		}
+		p = p->next;
 	}
 	return (node);
 }
