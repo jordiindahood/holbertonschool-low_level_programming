@@ -28,9 +28,9 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	p = *h;
 	q = *h;
 
-	for (i = 0; i <= idx && p->next; i++)
+	for (i = 0; p->next; i++)
 	{
-		if (i == idx)
+		if (i == idx - 1)
 		{
 			q = p->next;
 			node->prev = p;
