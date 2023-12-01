@@ -7,65 +7,27 @@
  */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-	dlistint_t *target = *head, *pre, *aft;
-	unsigned int i;
-	unsigned int size = dlistint_len(*head) -1;
+	dlistint_t *target = *head;
 
-	if (index > size || *head == NULL)
-		return (-1);
-
-	if (index == 0)
+	if (head)
 	{
-		target = *head;
-		*head = target->next;
-		free(target);
-		return (1);
-	}
-
-	i = 0;
-	while (i <= index)
-	{
-		target = target->next;
-		i++;
-	}
-
-	if (index == size)
-	{
-		pre = target->prev;
-		pre->next = NULL;
-		free(target);
-		return (1);
-	}
-
-	pre = target->prev;
-	aft = target->next;
-	pre->next = aft;
-	aft->prev = pre;
-	target->next = NULL;
-	target->prev = NULL;
-
-	free(target);
-
-	return (1);
-}
-/**
- * dlistint_len - return the number of elements in a the list
- * @h: const dlistint_t *
- * Return: size_t number of elements.
- */
-size_t dlistint_len(const dlistint_t *h)
-{
-	dlistint_t *p;
-	size_t i = 0;
-
-	if (h)
-	{
-		p = (dlistint_t *)h;
-		while (p)
+		while (index && target)
 		{
-			p = p->next;
-			i++;
+			target = target->next;
+			index--;
+		}
+		if (!index && target)
+		{
+			if (target->next)
+				target->next->prev = target->prev;
+			if (target->prev)
+				target->prev->next = target->next;
+			else
+				*head = target->next;
+			free(target);
+			return (1);
 		}
 	}
-	return (i);
+
+	return (-1);
 }
