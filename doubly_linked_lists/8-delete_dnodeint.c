@@ -23,23 +23,23 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	}
 
 	target = *head;
+	pre = target;
+	aft = target;
 
-	for (i = 0; i < size; i++)
+	for (i = 0; i <= size; i++)
 	{
 		if (i == index)
 			break;
 		target = target->next;
 	}
 
-	if (index == (unsigned int)dlistint_len(*head))
+	if (index == size)
 	{
 		pre = target->prev;
 		pre->next = NULL;
 		free(target);
 		return (1);
 	}
-	pre = target;
-	aft = target;
 
 	pre = target->prev;
 	aft = target->next;
