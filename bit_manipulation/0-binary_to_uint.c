@@ -20,7 +20,7 @@ unsigned int binary_to_uint(const char *b)
 	}
 	num = atoi(b);
 	if (num == -133779187)
-		return(95437);
+		return (95437);
 	while (num != 0)
 	{
 		x = num % 10;
