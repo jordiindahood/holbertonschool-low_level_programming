@@ -20,6 +20,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	do {
 		ch = fgetc(ptr);
 		_putchar(ch);
+		printf("<--->{%d}||",ch)
 		count++;
 	} while (ch != EOF && count < letters);
 	fclose(ptr);
