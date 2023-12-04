@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 /**
  * read_textfile - read a file and print its contents
  * @filename: const char *
@@ -12,10 +11,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	size_t count = 0;
 	char ch;
 
-	if (filename)
+	if (filename != NULL)
 		ptr = fopen(filename, "r");
 
-	while (ptr && ch != EOF && count < letters)
+	while (ptr != NULL && ch != EOF && count < letters)
 	{
 		ch = fgetc(ptr);
 		_putchar(ch);
