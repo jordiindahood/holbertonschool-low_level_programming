@@ -24,7 +24,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 			_putchar(ch);
 			count++;
 		}
-	} while (ch != EOF && count < letters);
+		if(ch != EOF)
+			break;
+	} while (count < letters);
 
 	fclose(ptr);
 
