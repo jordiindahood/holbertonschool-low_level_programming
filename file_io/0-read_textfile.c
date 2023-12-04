@@ -11,10 +11,13 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	size_t count = 0;
 	char ch;
 
-	if (filename != NULL)
-		ptr = fopen(filename, "r");
+	if (filename == NULL)
+		return (0);
+	ptr = fopen(filename, "r");
+	if (ptr == NULL)
+		return (0);
 
-	while (ptr != NULL && ch != EOF && count < letters)
+	while (ch != EOF && count < letters)
 	{
 		ch = fgetc(ptr);
 		_putchar(ch);
