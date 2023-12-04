@@ -1,10 +1,10 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * _isupper - check the code
- * Description: check if @c is an UPPERCASE letter
- * @c: char
- * Return: 1 if c is an uppercase letter, 0 if not
+ * read_textfile - read a file and print its contents
+ * @filename: const char *
+ * @letters: size_t
+ * Return: number of bytes or 0 if error
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
@@ -22,7 +22,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		count++;
 	}
 
-	if (!filename)
+	if (!ptr)
 		fclose(ptr);
 
 	return (count);
