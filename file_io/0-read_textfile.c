@@ -8,27 +8,20 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	FILE *ptr;
-	size_t count = 0;
-	char ch;
+	int file;
+	ssize_t bytes;
+	char buffer[1024 * 8];
 
-	if (filename == NULL || letters < 1)
-		return (0);
-	ptr = fopen(filename, "r");
-	if (ptr == NULL)
+	if (!filename || !letters)
 		return (0);
 
-	while (!feof(ptr) && count != letters)
-	{
-		ch = fgetc(ptr);
-		if (ch >= 0)
-		{
-			_putchar(ch);
-			count++;
-		}
-	}
+	file = open(filename, O_RDONLY);
+	if (file == -1)
+		return (0);
 
-	fclose(ptr);
+	bytes = read(file, &buffer[0], letters);
+	bytes = write(STDOUT_FILENO, &buffer[0], bytes);
+	close(file);
 
-	return (count);
+	return (bytes);
 }
