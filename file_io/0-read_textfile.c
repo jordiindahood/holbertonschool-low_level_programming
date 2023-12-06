@@ -1,5 +1,4 @@
 #include "main.h"
-#include <sys/syscall.h>
 /**
  * read_textfile - read a file and print its contents
  * @filename: const char *
@@ -10,7 +9,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int file;
 	ssize_t bytes;
-	char buffer[1024 * 8];
+	char buffer[1024];
 
 	if (!filename || !letters)
 		return (0);
@@ -19,8 +18,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (file == -1)
 		return (0);
 
-	bytes = read(file, &buffer[0], letters);
-	bytes = write(STDOUT_FILENO, &buffer[0], bytes);
+	bytes = read(file, buffer, letters);
+	bytes = write(STDOUT_FILENO, buffer, bytes);
 	close(file);
 
 	return (bytes);
