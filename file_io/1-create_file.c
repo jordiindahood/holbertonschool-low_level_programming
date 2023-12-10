@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * read_textfile - read a file and print its contents
+ * create_file - create a file filled with a text
  * @filename: const char *
- * @letters: size_t
+ * @text_content: char*
  * Return: number of bytes or 0 if error
  */
 int create_file(const char *filename, char *text_content)
