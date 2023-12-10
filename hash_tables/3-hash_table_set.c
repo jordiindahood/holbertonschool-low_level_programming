@@ -31,7 +31,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	node2 = malloc(sizeof(hash_node_t));
 	if (!node2)
 		return (0);
-	node1->key = strdup(key);
+	node2->key = strdup(key);
 	if (!node2->key)
 	{
 		free(node2);
