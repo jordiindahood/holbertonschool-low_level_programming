@@ -45,6 +45,6 @@ int main(int ac, char **av)
 		dprintf(2, ARGUMENT_NOT_CORRECT);
 		exit(97);
 	}
-	cp_textfile(av[1], av[2]);
+	cp(av[1], av[2]);
 	return (0);
 }
