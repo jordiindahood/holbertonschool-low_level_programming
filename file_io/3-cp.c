@@ -30,6 +30,11 @@ ssize_t cp(const char *src, const char *dest)
 	fd = close(fd);
 	fd1 = close(fd1);
 
+	if (fd == -1)
+		dprintf(2, DESCRIPTOR_NOT_CLOSE, fd), exit(100);
+	if (fd1 == -1)
+		dprintf(2, DESCRIPTOR_NOT_CLOSE, fd1), exit(100);
+
 	return (0);
 }
 /**
